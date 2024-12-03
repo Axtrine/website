@@ -1,1 +1,35 @@
-
+        #headerText {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px; 
+}
+#normaltext {
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 20px; 
+}
+#normaltext2 {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 20px; 
+}
+#normaltextbutfar {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 40px; 
+}
+        #dynamicText {
+            font-size: 11px;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.432);
+        }
+    
+        body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;            
+    margin: 0;                
+    background: linear-gradient(90deg, #324cff, #2A8FEA, #24BBDA );
