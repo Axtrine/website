@@ -12,3 +12,8 @@
         function checkTime(j) {
           if (j < 10)  {j = "0" + j};  // add zero in front of numbers < 10
           return j;
+ const randomIndex = Math.floor(Math.random() * textOptions.length);
+        console.log(randomIndex, textOptions[randomIndex]);  // debugging :>
+
+        // yippee? yippee.
+        document.getElementById('dynamicText').innerText = textOptions[randomIn
