@@ -1,157 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="assets/favicon.gif" type="image/gif">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is not steam happy</title>
-    <style>
-        /* Styling for text and layout */
-        #headerText {
-            font-size: 30px;
-            font-weight: bold;
-            font-style: italic;
-            margin-bottom: 20px; 
-        }
-        #normaltext {
-            font-size: 15px;
-            font-style: italic;
-            margin-bottom: 20px; 
-        }
-        #normaltext2 {
-            font-size: 22px;
-            font-style: italic;
-            margin-bottom: 20px; 
-        }
-        #normaltextbutfar {
-            font-size: 22px;
-            font-style: italic;
-            margin-bottom: 40px; 
-        }
-        #bordering {
-            font-size: 16px;
-            margin-bottom: 40px; 
-            color: rgba(0, 0, 0, 0.274);
-        }
-        #dynamicText {
-            font-size: 11px;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.432);
-        }
+   <style>/* Here be all my css code in case of future need.*/
 
-        body {
-            display: flex;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(90deg, #324cff, #2A8FEA, #24BBDA );
-            flex-direction: row;  /* Aligns the sidebar and content side by side */
-        }
-
-        /* Sidebar styling */
-        .sidebar {
-            width: 250px;
-            height: 100vh;
-            background-color: #00000027;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding-top: 20px;
-            padding-left: 10px;
-            color: white;
-        }
-
-        .sidebar h2 {
-            text-align: center;
-            color: rgb(0, 0, 0);
-        }
-
-        .sidebar a {
-            display: block;
-            color: rgb(0, 0, 0);
-            padding: 10px 15px;
-            text-decoration: none;
-            margin: 5px 0;
-            border-radius: 4px;
-        }
-
-        .sidebar a:hover {
-            background-color: #0000001e;
-        }
-
-        /* Main content styling */
-        .the-shitassiest-of-shitass-webpages {
-            margin-left: 100px; 
-            flex-grow: 1; 
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-        }
-        .content-box a {
-            display: block;
-            color: rgb(0, 0, 0);
-            padding: 10px 15px;
-            text-decoration: none;
-            margin: 5px 0;
-            border-radius: 4px;
-        }
-        .content-box a:hover {
-            background-color: #0000001e;
-        }
-
-        .content-box {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0); /* Light background for contrast */
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column; /* Stack text vertically */
-        }
-            button {
-      background-color: #ffffff50; 
-      color: rgb(0, 0, 0); 
-      padding: 8px 13px; 
-      font-size: 16px; 
-      font-style: italic;
-      border: none; 
-      border-radius: 5px; 
-      cursor: pointer; 
+    #headerText {
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 20px; 
     }
-
-    button:hover {
-      background-color: #ffffff91; 
+    #normaltext {
+        font-size: 15px;
+        font-style: italic;
+        margin-bottom: 20px; 
     }
-    .text-shadow {
-      font-size: 30px;
-      font-weight: bold;
-      color: #000000; /* Text color */
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    #normaltext2 {
+        font-size: 22px;
+        font-style: italic;
+        margin-bottom: 20px; 
     }
-    .dyn-text-shadow {
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    #normaltextbutfar {
+        font-size: 22px;
+        font-style: italic;
+        margin-bottom: 40px; 
     }
-    </style>
-</head>
-<body>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2 class="text-shadow">Flarg: The sidebar</h2>
-        <a href="updates.html">Updates</a>
-        <a href="oldjoke.html">Hell</a>
-        <a href="indexold.html">Old version</a>
-        <a href ="about.html">The about me nobody cares about.</a>
-        <a href ="https://www.youtube.com/@axtrinne">My youtube channel.</a>
-        <a href="https://discord.gg/3zKJBDfDsY">My discord server</a>
-    </div>
-
-    <div class="the-shitassiest-of-shitass-webpages">
-        <div class="content-box">
-    <h1 id="headerText" class="text-shadow">Flarg: Web design is my passion.</h1>
-    <p>                     </p>
-    <h1 id="dynamicText" id="dyn-text-shadow"></h1>
-   <p>                     </p>
-    <p1 id="normaltext">Shitass webpage.</p1>
+    #bordering {
+        font-size: 16px;
+        margin-bottom: 40px; 
+        color: rgba(0, 0, 0, 0.274);
+    }
+            #dynamicText {
+                font-size: 11px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.432);
+            }
+        
+            body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;      
+        height: 100vh;            
+        margin: 0;                
+        background: linear-gradient(90deg, #324cff, #2A8FEA, #24BBDA ); }
+        </style>
+  <title>This still isn't (Or wait would it be 'this wasn't steam happy?) steam happy</title>
+    <h1 id="headerText">Flarg: Web design is my passion.</h1>
+    <p>--------------------------------------------------------------------------------                     </p>
+    <h1 id="dynamicText"></h1>
+   <p> --------------------------------------------------------------------------------                     </p>
+    <p1 id="normaltext">Shitass webpage. (Dec. 7th 2024 version)</p1>
     <p1 id="normaltext2">Welcome.</p1>
     <body onload="startTime()">
         <div id="txt"></div> 
@@ -177,7 +75,6 @@
     <p1 id="normaltext2">                  </p1>
     <p1 id="normaltext2">                  </p1>
     <p1 id="normaltext2">la shittlefuck</p1>
-    <p1 id="normaltext2">Thank you Xandromeda as you reminded this existed.</p1>
     <p1 id="normaltext2">                  </p1>
     <p1 id="normaltext2">More text = the more i have to code</p1>
 
@@ -267,8 +164,7 @@
             "How do I get my husband to stop going 'Goblin Mode' during sex? TLDR; My husband says 'Goblin Mode activated' when we start to have sex, growls and acts like a caveman, and then says 'Goblin Mode off'' when we stop, and then pretends not to remember afterward.I really love my husband and he's always been great in bed. But recently he's been acting really weird. So, a couple of days ago, my son went on a rampage through our house and said he was in 'Goblin Mode'. We didn't really know what to do with him, so we sent him to live with my parents so he can go to a special needs school. My husband a really great relationship with our son and loved him more than anything. Naturally, he was upset when he had to leave. He's an incredibly tough man, but this was the first time I've ever seen him cry. I think since then, he's been a little emotionally unwell. I've heard him muttering, 'Goblin' repeatedly when he didn't notice me, staring blankly into his food, and just going alone by himself to do who knows what. I feel awful for him, but we both agreed that this was for the best. Last night, the day after our son went away, we decided to have sex to relieve our stress. However, my husband said 'Goblin Mode activated', starting growling, and went wild having sex with me. Admittedly, it was some of the best and most experimental sex I've ever had, but I'm worried that something might be going on with my husband. Any advice? Edit: The problem isn't the 'Goblin Mode', it's that he could be ill",
             "how do i kill someone?",
             "You can't match my freak.",
-            "I cast: TUNGSTEN BALLSACK!",
-            "sjisfdof;/sd;'pjoieadioeasdiko'9psad'WOp'dSWDmJWOPDJWIDPOK <----- sorz cat stepped on keyboard"
+            "I cast: TUNGSTEN BALLSACK!"
  ];
 
   
@@ -295,7 +191,6 @@
 // Dec.1st - actually started making this, got the splash screen shit working
 // Dec.1st again - Albuquerque backround
 // Dec.2nd - Added the subpage, more reading (yuck) and button. 
-// Dec.8th - Done the sidebar and revampish 
 
 // na na na boo boo
 </script>
