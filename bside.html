@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/favicon.gif" type="image/gif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The deep abyss.</title>
+    <style>
+        /* Styling for text and layout */
+        #headerText {
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 20px; 
+            color:rgb(255, 255, 255)
+        }
+        #normaltext {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 20px; 
+            color:rgb(255, 255, 255)
+        }
+        #normaltext2 {
+            font-size: 22px;
+            font-style: italic;
+            margin-bottom: 20px; 
+            color:rgb(255, 255, 255)
+        }
+        #normaltextbutfar {
+            font-size: 22px;
+            font-style: italic;
+            margin-bottom: 40px; 
+        }
+        #bordering {
+            font-size: 16px;
+            margin-bottom: 40px; 
+            color: rgba(0, 0, 0, 0.274);
+        }
+        #dynamicText {
+            font-size: 11px;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.432);
+        }
+        #dynamicText2 {
+            font-size: 8px;
+            font-style: bold;
+            color: rgb(255, 255, 255);
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, #000000, #220000, #1a0000 );
+            flex-direction: row;  /* Aligns the sidebar and content side by side */
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #00000027;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            padding-left: 10px;
+            color: white;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .sidebar a {
+            display: block;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover {
+            background-color: #0000001e;
+        }
+
+        /* Main content styling */
+        .the-shitassiest-of-shitass-webpages {
+            margin-left: 100px; 
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+        }
+        .content-box a {
+            display: block;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+        .content-box a:hover {
+            background-color: #0000001e;
+        }
+
+        .content-box {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0); /* Light background for contrast */
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column; /* Stack text vertically */
+        }
+            button {
+      background-color: #ffffff50; 
+      color: rgb(0, 0, 0); 
+      padding: 8px 13px; 
+      font-size: 16px; 
+      font-style: italic;
+      border: none; 
+      border-radius: 5px; 
+      cursor: pointer; 
+    }
+
+    button:hover {
+      background-color: #ffffff91; 
+    }
+    .text-shadow {
+      font-size: 30px;
+      font-weight: bold;
+      color: #000000; /* Text color */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    .dyn-text-shadow {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    }
+    </style>
+</head>
+<body>
+
+    
+    <div class="the-shitassiest-of-shitass-webpages">
+        <div class="content-box">
+    <h1 id="headerText" class="text-shadow">Flarg: 𓆏.</h1>
+    <p>                     </p>
+    <h1 id="dynamicText" id="dyn-text-shadow"></h1>
+   <p>                     </p>
+    <p1 id="normaltext">You come here often?.</p1>
+   
+   
+    <p1 id="normaltext2">                  </p1>
+    <p1 id="normaltext2">                  </p1>
+    <p1 id="normaltext2">                  </p1>
+    <p1 id="normaltext2">                  </p1>
+    <p1 id="normaltext2">The end.</p1>
+    <p1 id="dynamicText2">Flarg hell</p1>
+    <p1 id="normaltext2">                  </p1>
+    
+
+   
+   
+      </style>
+    <script>
+        // i think this works?
+        const textOptions = [
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end².",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end?",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "God, I hate this stupid ass place.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end.",
+            "The end."
+ ];
+
+  
+        const randomIndex = Math.floor(Math.random() * textOptions.length);
+        console.log(randomIndex, textOptions[randomIndex]);  // debugging :>
+
+        // yippee? yippee.
+        document.getElementById('dynamicText').innerText = textOptions[randomIndex];
+
+
+    </script>
+
+</body>
+</html>
+
+
+
