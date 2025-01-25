@@ -38,7 +38,20 @@
             font-size: 11px;
             font-style: italic;
             color: rgba(255, 255, 255, 0.432);
-        }
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            visibility: visible;
+            opacity: 1;
+
+
+}
+
+.hidden {
+  opacity: 0;
+  visibility:hidden;
+  transform: translateY(-10px);
+}
+            
+        
         #dynamicText2 {
             font-size: 8px;
             font-style: bold;
@@ -135,6 +148,14 @@
     .dyn-text-shadow {
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
     }
+    #dynamicText a {
+      color: inherit; 
+      text-decoration: none; 
+    }
+    #dynamicText a:hover { 
+      text-decoration: bold; 
+      color: #7c0000 
+    }
     </style>
 </head>
 <body>
@@ -184,7 +205,7 @@
     <p1 id="normaltext2">                  </p1>
     <p1 id="normaltext2">                  </p1>
     <p1 id="normaltext2">la shittlefuck</p1>
-    <p1 id="dynamicText2">Flarg v1.1b</p1>
+    <p1 id="dynamicText2">Flarg v2.0</p1>
     <p1 id="normaltext2">                  </p1>
     <p1 id="normaltext2">More text = the more i have to code</p1>
     <audio controls loop autoplay src="melon.mp3"></audio>
@@ -288,17 +309,135 @@
             "Hi Squidward.",
             "All religious texts are false because they don't mention Jägermeister.",
             "you see that little /index.html? change that to /bside.html",
-            "*"
+            "*",
+            "I'm farted.",
+            "your    fat.",
+            "Check your floorboards",
+            "there is an armed shotgun trap at your front door",
+            "172.21.156.22",
+            "there are anti-personel landmines on your lawn",
+            "i have an artillery cannon aimed at your doorbell",
+            "you will die in 6 days",
+            "<a href='bside.html' target='_blank'>The door.</a>",
+            "i CAN href :)",
+            "no one is coming to save you.",
+            "fun fact: 19 furries ejaculated on a pizza at a furry convention and left it out in the lobby in 2021",
+            "fun fact: there are catacombs under every government building in the us",
+            "fun fact: there is no one behind you.",
+            "watch yo tone mf",
+            "i will cut a hole in your chest, puncture your skull with hooks, and pull your head out through the hole",
+            "died of ball fart",
+            "fun fact: the man in the suit is not real.",
+            "i love playing in mud and eating sand",
+            "yeah kill this guy with hammers.... right here....",
+            "LOCK TF IN",
+            "you have $145,850 in unpaid taxes and the irs is coming for you",
+            "_i__er",
+            "i have chronic diarrhea",
+            "conductor we have a problem",
+            "please officer i cant breathe",
+            "i swear im not drunk, occifer",
+            "fun fact: the pills are not doing what you think they are.",
+            "fun fact: loop loop loop loop loop loop loop",
+            "fun fact: no no no no no no no",
+            "me explaining when the are and you when the no and you and the are and the is are when the the the wehn the are is i i i and the am is the y and you arewhen the are and you when the no and you and the are and the is are when the no and you and the are and the ius are when the the the when the are is i i i i i and the am is the y and you are",
+            "nei man?? what yu say men? what you say me? FAKC YOU MAN. FACK YOU.",
+            "beta is so silly",
+            "thanks beta for the deranged texts",
+            "WHY DO THEY CALL IT A RESTROOM IM FIGHTING FOR MY LIFE IN HERE",
+            "fun fact: the dog is outside your house.",
+            "fun fact: no one is watching you.",
+            "fun fact: the deer.",
+            "fun fact: eyes",
+            "39 buried, 0 found",
+            "fun fact: no one will ever know where you went",
+            "fun fact: every memory you have ever had is fake",
+            "fun fact: i love you.",
+            "kys (keep yourself safe)",
+            "gibby goober flibby womp",
+            "schmeckle tickle zippy zap",
+            "gowunga bowunga vuwigga womp",
+            "the fitness gram pacer test is a multi-stage aerobic capacity test",
+            "fun fact: BREAK THE CYCLE",
+            "fun fact: human flesh takes around 10 days to rot",
+            "fun fact: there are bugs under your skin. cut your skin open.  D I G  T H E M  O U T .",
+            "fun fact: stop breathing.",
+            "pthnpul wbaapun aopz aoyvbno h kljvkly qbza av ayhuzshal pa ohoh fvb kbtihzz kbti pkpva zabwpk",
+            "fun fact: breaking your bones would be very fun",
+            "fun fact: there is no one hiding around the corner",
+            "fun fact: you are all alone. exposed.  V U L N E R A B L E .",
+            "HELL IS FULL. BLOOD IS FUEL.",
+            "my balls itch",
+            "fun fact: you are not safe."
  ];
-
+ // Text-to-speech
+ const textCounters = new Array(textOptions.length).fill(0);
+ function speakText(index) {
+  const utterance = new SpeechSynthesisUtterance(textOptions[index]);
+  speechSynthesis.speak(utterance);
+}
+// Text loading
+ function loadRandomText() {
+      const randomIndex = Math.floor(Math.random() * textOptions.length);
+      loadText(randomIndex);
+      
+    }
+    console.log("uhhhh, hi?")
   
-        const randomIndex = Math.floor(Math.random() * textOptions.length);
-        console.log(randomIndex, textOptions[randomIndex]);  // debugging :>
+    function loadText(index) {
+  const dynamicText = document.getElementById('dynamicText');
+  if (index >= 0 && index < textOptions.length) {
+    dynamicText.classList.add('hidden'); 
+   
+    setTimeout(() => {
+      dynamicText.innerHTML = textOptions[index];
+      dynamicText.classList.remove('hidden'); 
+    }, 300); 
 
-        // yippee? yippee.
-        document.getElementById('dynamicText').innerText = textOptions[randomIndex];
+    dynamicText.innerHTML = escapeHTML(textOptions[index]);
+  } else {
+     // speakText(index);
+    console.error(`Index out of bounds. Please provide a number between 0 and ${textOptions.length - 1}.`);
+  }
+  // Cycle on keypress
+}
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowRight') {
+    loadRandomText(); 
+  } else if (event.key === 'ArrowLeft') {
+    loadText(0); 
+  }
+});
+// i done forgor
+function escapeHTML(html) {
+  const div = document.createElement('div');
+  div.textContent = html;
+  return div.innerHTML;
+}
+    loadRandomText();
 
+    window.loadText = loadText;
+    window.loadRandomText = loadRandomText;
+   
+    let autoRotateInterval = null;
 
+function startAutoRotate(interval = 5000) {
+  if (autoRotateInterval) clearInterval(autoRotateInterval);
+  autoRotateInterval = setInterval(() => {
+    const randomIndex = Math.floor(Math.random() * textOptions.length);
+    loadText(randomIndex);
+  }, interval);
+}
+textCounters[index]++;
+console.log(`"${textOptions[index]}" has been displayed ${textCounters[index]} times.`);
+
+function stopAutoRotate() {
+  clearInterval(autoRotateInterval);
+}
+
+// Start auto-rotation by default 
+// startAutoRotate();
+    
     </script>
 
 </body>
@@ -321,7 +460,18 @@
 // ~2025~                                                                     | new year :steamhappy: 
 // [Oh, right I have a website. Completly forgot about it lmao. Have this 𓆏.] | flarg 
 // Jan.23rd - Added the 𓆏 (is that it? no.)                                   | (v1.1)
-// Jan.23rd Cont. - melon :3 / sidebar change (minor) / dyntext additions /   | (v1.1 Cont.)
+// Jan.23rd Cont. - melon :3 / sidebar change (minor) / dyntext additions /   | (v1.1b)
+// Jan.25th - Updated the code for the dyntext, made it where i can force load| (v1.2)
+// same day - yeah no, full redone js for dyntext                             | (v2.0) - Redone Dynamically 
+
+// loadText(0); to load
+
+
+// Version markdown guide
+// v0.0g - github
+// v0.0a - axtrine
+// v0.0d - only dyntext added
+// v0.0b - cont.
 
 
 // na na na boo boo
