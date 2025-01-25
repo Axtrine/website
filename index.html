@@ -41,6 +41,8 @@
             transition: opacity 0.3s ease, transform 0.3s ease;
             visibility: visible;
             opacity: 1;
+            
+            
 
 
 }
@@ -208,7 +210,7 @@
     <p1 id="dynamicText2">Flarg v2.0</p1>
     <p1 id="normaltext2">                  </p1>
     <p1 id="normaltext2">More text = the more i have to code</p1>
-    <audio controls loop autoplay src="melon.mp3"></audio>
+    
 
    
     <button onclick="incrementCounter()">Button for clicking</button>
@@ -370,7 +372,12 @@
             "my balls itch",
             "fun fact: you are not safe.",
             ":p",
-            ";p"
+            ";p",
+            "<img src='assets/Steamhappy.png'style='width:32px;height:32px;'>",
+            "<audio controls loop autoplay src='melon.mp3'></audio>",
+            "video? no.",
+           "<audio loop autoplay src='weird.mp3'>'style='width:1px;height:1px;'</audio>",
+           "gibby goober flibby womp schmeckle tickle zippy zap gowunga bowunga vuwigga womp"
  ];
 // Keybinds
  document.addEventListener('keydown', (event) => {
@@ -382,6 +389,13 @@
     loadText(90); // Cheating are we? 
   }  else if (event.key === ' ') { 
     loadRandomText(); 
+  }  else if (event.key === 'M' || event.key === 'm') { 
+    loadText(144); // wrong
+  }  else if (event.key === 'S' || event.key === 's') { 
+    loadText(143); // it was all a lie  
+  }  else if (event.key === 'W' || event.key === 'w') { 
+    loadText(146); // dun dun dunnnnnnnnnn  
+  
   
   
   } 
@@ -525,6 +539,7 @@ function stopAutoRotate() {
 // Jan.23rd Cont. - melon :3 / sidebar change (minor) / dyntext additions /   | (v1.1b)
 // Jan.25th - Updated the code for the dyntext, made it where i can force load| (v1.2)
 // same day - yeah no, full redone js for dyntext                             | (v2.0) - Redone Dynamically 
+// same day - MORE redone dynamic text                                        | (v2.1)
 
 
 // loadText(0); to load
@@ -564,4 +579,7 @@ document.addEventListener('keydown', (event) => {
   }
   
 });
+
+
+    
     </script>
