@@ -20,7 +20,7 @@
     "Isn't this just worse ripped.guide? Well yes, but it's updated and neater in my opinion.",
     "C:/Windows/Users/Adrian/Documents/nothing_to_see_here.txt",
     "C:/Windows/Users/Adrian/Desktop/guh/flargapiracysite.html",
-    "sigh, we lost a real one - Nouvas on the situation of the shrimp text",
+    "A shrimp (pl.: shrimp (US) or shrimps (UK)) is a crustacean (a form of shellfish) with an elongated body and a primarily swimming mode of locomotion  typically belonging to the Caridea or Dendrobranchiata of the order Decapoda, although some crustaceans outside of this order are also referred to as shrimp. The shrimp Palaemon serratus of the infraorder Caridea. More narrow definitions may be restricted to Caridea, to smaller species of either group or to only the marine species. Under a broader definition, shrimp may be synonymous with prawn, covering stalk-eyed swimming crustaceans with long, narrow muscular tails (abdomens), long whiskers (antennae), and slender legs.[1] Any small crustacean which resembles a shrimp tends to be called one.[2] They swim forward by paddling with swimmerets on the underside of their abdomens, although their escape response is typically repeated flicks with the tail driving them backwards very quickly. Crabs and lobsters have strong walking legs, whereas shrimp have thin, fragile legs which they use primarily for perching.[3]. Shrimp are widespread and abundant. There are thousands of species adapted to a wide range of habitats. They can be found feeding near the seafloor on most coasts and estuaries, as well as in rivers and lakes. To escape predators, some species flip off the seafloor and dive into the sediment.[3] They usually live from one to seven years.[4] Shrimp are often solitary, though they can form large schools during the spawning season.[3][5] They play important roles in the food chain and are an important food source for larger animals ranging from fish to whales. The muscular tails of many shrimp are edible to humans, and they are widely caught and farmed for human consumption. Commercial shrimp species support an industry worth 50 billion dollars a year,[3] and in 2010 the total commercial production of shrimp was nearly 7 million tonnes. Shrimp farming became more prevalent during the 1980s, particularly in China, and by 2007 the harvest from shrimp farms exceeded the capture of wild shrimp. There are significant issues with excessive bycatch when shrimp are captured in the wild, and with pollution damage done to estuaries when they are used to support shrimp farming. Many shrimp species are small as the term shrimp suggests, about 2 cm (0.79 in) long, but some shrimp exceed 25 cm (9.8 in). Larger shrimp are more likely to be targeted commercially and are often referred to as prawns, particularly in the Commonwealth of Nations and former British colonies.",
     "I was nowhere during September 11th 2001",
     "i need ideas :<",
     "https://discord.gg/3zKJBDfDsY",
@@ -152,11 +152,9 @@
    "What was this website for again? I forgot.",
    "Sir this is a Wendy's",
    "Mods, log his IP",
-   "eat an anvil",
-   "Absolute cinema",
-   "here at Shitfuck Industries™ we make quality doohickeys™ and shitfucks™",
-   "Hello sir, i am contacing you about your cars extended waranty."
+   "eat an anvil"
 ];
+
 
 let autoRotateInterval = null;
 let currentIndex = 0; 
@@ -203,6 +201,13 @@ if (statusElement) {
 statusElement.innerText = isActive ? "Auto-rotate: ON" : "Auto-rotate: OFF";
 }
 }
+
+// Text-to-speech
+const textCounters = new Array(textOptions.length).fill(0);
+function speakText(index) {
+const utterance = new SpeechSynthesisUtterance(textOptions[index]);
+speechSynthesis.speak(utterance);
+}
 // Text loading
 function loadRandomText() {
 const randomIndex = Math.floor(Math.random() * textOptions.length);
@@ -223,7 +228,7 @@ dynamicText.classList.remove('hidden');
 
 dynamicText.innerHTML = escapeHTML(textOptions[index]);
 } else {
-
+// speakText(index);
 console.error(`Index out of bounds. Please provide a number between 0 and ${textOptions.length - 1}.`);
 }
 // Cycle on keypress
@@ -244,7 +249,22 @@ loadRandomText();
 
 window.loadText = loadText;
 window.loadRandomText = loadRandomText;
+
+// let autoRotateInterval = null;
+
+// function startAutoRotate(interval = 5000) {
+//  if (autoRotateInterval) clearInterval(autoRotateInterval);
+//  autoRotateInterval = setInterval(() => {
+//    const randomIndex = Math.floor(Math.random() * textOptions.length);
+//    loadText(randomIndex);
+//  }, interval);
+// }
+// textCounters[index]++;
+// console.log(`"${textOptions[index]}" has been displayed ${textCounters[index]} times.`);
+
 function stopAutoRotate() {
 clearInterval(autoRotateInterval);
 }
 
+// Start auto-rotation by default 
+// startAutoRotate();
