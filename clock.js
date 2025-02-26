@@ -14,4 +14,4 @@
           if (j < 10)  {j = "0" + j};  
           return j;
         }
-  
+  // thanks vance and oofie :D
