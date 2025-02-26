@@ -52,6 +52,20 @@
        <script src="brains.js"></script>
        <script src="button.js"></script>
        <script src="flavorful.js"></script>
+       <script>function loadRandomText() {
+        const randomIndex = Math.floor(Math.random() * textOptions.length);
+        loadText(randomIndex);
+        
+        }
+        console.log("uhhhh, hi?")
+        
+        function loadText(index) {
+        const dynamicText = document.getElementById('dynamicText');
+        if (index >= 0 && index < textOptions.length) {
+        } }
+        dynamicText.classList.add('hidden');  
+        // hopefully this made it work...
+        </script>
 </body>
 </html>
 
