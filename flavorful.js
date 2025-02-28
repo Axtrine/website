@@ -152,7 +152,9 @@
    "What was this website for again? I forgot.",
    "Sir this is a Wendy's",
    "Mods, log his IP",
-   "eat an anvil"
+   "eat an anvil",
+   "Nouvas asked me to make a text for him.",
+   "wah wah wah wah wah"
 ];
 
 
