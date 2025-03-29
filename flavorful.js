@@ -154,7 +154,8 @@
    "Mods, log his IP",
    "eat an anvil",
    "Nouvas asked me to make a text for him.",
-   "wah wah wah wah wah"
+   "wah wah wah wah wah",
+   "Wouldn't you like to know weather boy?"
 ];
 
 
