@@ -153,7 +153,7 @@
    "Sir this is a Wendy's",
    "Mods, log his IP",
    "eat an anvil",
-   "Nouvas asked me to make a text for him.",
+   "Nouvas asked me to make a text for her.",
    "wah wah wah wah wah",
    "Wouldn't you like to know weather boy?",
    "can you eat my pussy (cat) out today please?",
