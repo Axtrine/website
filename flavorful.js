@@ -156,8 +156,10 @@
    "Nouvas asked me to make a text for her.",
    "wah wah wah wah wah",
    "Wouldn't you like to know weather boy?",
-   "can you eat my pussy (cat) out today please?",
-   "Removed piracy.html - May 5th 2025"
+   "can you eat my pussy (cat) today please?",
+   "Removed piracy.html - May 5th 2025",
+   "press space to space",
+   "Xandromeda, sometimes called by 'Xantax' or 'Xandwich' etc, is a Filipino femboy. The twink trys to say he isn't, however, he fails. "
 ];
 
 
@@ -273,3 +275,5 @@ clearInterval(autoRotateInterval);
 
 // Start auto-rotation by default 
 // startAutoRotate();
+// :p
+
