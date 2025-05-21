@@ -159,7 +159,7 @@
    "can you eat my pussy (cat) today please?",
    "Removed piracy.html - May 5th 2025",
    "press space to space",
-   "Xandromeda, sometimes called by 'Xantax' or 'Xandwich' etc, is a Filipino femboy. The twink trys to say he isn't, however, he fails. "
+   "Xandromeda (itsxandromeda), sometimes called by 'Xantax' or 'Xandwich' etc, is a Filipino femboy. The twink trys to say he isn't, however, he fails. "
 ];
 
 
