@@ -159,9 +159,10 @@
    "can you eat my pussy (cat) today please?",
    "Removed piracy.html - May 5th 2025",
    "press space to space",
-   "Xandromeda (itsxandromeda), sometimes called by 'Xantax' or 'Xandwich' etc, is a Filipino femboy. The twink trys to say he isn't, however, he fails. "
+   "Xandromeda (itsxandromeda), sometimes called by 'Xantax' or 'Xandwich' etc, is a Filipino femboy. The twink trys to say he isn't, however, he fails. ",
+   "GET ME A DAMN BEER! - glue"
 ];
-
+// for FUCKS SAKE can i please stop neglecting my son (this site)
 
 let autoRotateInterval = null;
 let currentIndex = 0; 
@@ -170,7 +171,7 @@ let isAutoRotateActive = false;
 function startAutoRotate() {
 if (isAutoRotateActive) {
 console.log("Auto-rotate is already active.");
-return;
+return;d
 }
 
 isAutoRotateActive = true;
