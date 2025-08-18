@@ -9,10 +9,4 @@ function incrementCounter() {
 function closePage() {
     window.close(); 
 }
- <p id="conditionalText" style="display: none;">This text appears conditionally.</p>
-    <script>
-        let status = "enabled";
-        if (status === "enabled") {
-            document.getElementById("conditionalText").style.display = "block";
-        }
-    </script>
+
