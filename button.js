@@ -2,11 +2,12 @@ let clickCount = 0;
 function incrementCounter() {
     clickCount++; 
     document.getElementById("counterDisplay").innerText = `Button for clicking clicked ${clickCount} times.`; // Display the count
-    
+
     if (clickCount >= 100) {
             document.getElementById("conditionalText").style.display = "block";
+    }
 }
-}
+
 function closePage() {
     window.close(); 
 }
