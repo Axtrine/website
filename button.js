@@ -18,7 +18,7 @@ The older system
 
     button.addEventListener("click", () => {
       count++;
-      countDisplay.textContent = count;
+      countDisplay.clickCount = count;
 
       if (count === 100) {
         message.style.display = "block";
