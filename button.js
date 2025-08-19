@@ -6,7 +6,7 @@ function incrementCounter() {
     if (clickCount >= 100) {
             document.getElementById("conditionalText").style.display = "block";
 }
-
+}
 function closePage() {
     window.close(); 
 }
