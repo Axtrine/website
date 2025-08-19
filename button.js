@@ -8,3 +8,17 @@ function closePage() {
     window.close(); 
 }
 
+  let count = 0;
+    const button = document.getElementById("counterDisplay");
+    const countDisplay = document.getElementById("clickCount");
+    const message = document.getElementById("");
+
+    button.addEventListener("click", () => {
+      count++;
+      countDisplay.textContent = count;
+
+      if (count === 100) {
+        message.style.display = "block";
+      }
+    }
+
