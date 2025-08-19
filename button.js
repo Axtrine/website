@@ -1,27 +1,28 @@
-/* let clickCount = 0; 
+let clickCount = 0; 
 function incrementCounter() {
     clickCount++; 
     document.getElementById("counterDisplay").innerText = `Button for clicking clicked ${clickCount} times.`; // Display the count
+    
+    if (clickCount >= 100) {
+            document.getElementById("conditionalText").style.display = "block";
 }
 
 function closePage() {
     window.close(); 
 }
 
-The older system
-*/
 
-  let count = 0;
-    const button = document.getElementById("counterDisplay");
-    const countDisplay = document.getElementById("clickCount");
-    const message = document.getElementById("conditionalText");
+/*
+ <p id="conditionalText" style="display: none;">This will become a clicker minigame.</p>
+    <script>
+        
+        
+        
+           }
+// yeah i'm gonna be honest, absolutely zero idea what i'm doing.
+    </script>
 
-    button.addEventListener("click", () => {
-      count++;
-      countDisplay.clickCount = count;
-
-      if (count === 100) {
-        message.style.display = "block";
-      }
-    }
-
+   
+    <button onclick="incrementCounter()">Button for clicking</button>
+    <p id="counterDisplay">Button for clicking clicked 0 times.</p>
+    */
